@@ -6,6 +6,7 @@ import cors from "cors";
 import userRouter from "./routes/userRouter";
 import authRouter from "./routes/authRouter";
 import { config as dotenv } from "dotenv";
+import todoRouter from "./routes/todoRouter";
 
 class App {
 	public app: Application;
@@ -31,6 +32,7 @@ class App {
 
 		this.app.use("/api/v1/users", userRouter);
 		this.app.use("/api/v1/auth", authRouter);
+		this.app.use("/api/v1/todos", todoRouter);
 	}
 }
 
